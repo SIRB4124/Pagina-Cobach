@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basura de Desarrollo Sostenible</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+    }
+    nav ul li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #ddd;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .content {
+      margin-top: 20px;
+      display: none; /* oculta todos los contenidos por defecto */
+    }
+    .content.active {
+      display: block; /* muestra el contenido activo */
+    }
+    .content h2 {
+      color: #333;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Basura de Desarrollo Sostenible</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="file:///C:/laura/Sitio%20Web/visitas%20cobach.html#">Inicio</a></li>
+    <li><a href="#" onclick="showContent('nosotros')">Nosotros</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="beneficios.html">Beneficios</a></li>
+    <li><a href="file:///C:/laura/Sitio%20Web/contacto.html">Contacto</a></li>
+        <li><a href="file:///C:/laura/Sitio%20Web/Aprende%20mas.html">Aprende más</a></li>
+     <li><a href="file:///C:/laura/Sitio%20Web/Comentarios.html">Comentarios</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="content" id="nosotrosContent">
+    <h2>Sobre Nosotros</h2>
+    <p>Somo unos estudiantes de la universidad autonoma de chiapas que quieren que los alumnos del cobach tengan conciencia sobre el problema de la basura que hay en chiapas, mexico y en todo el mundo y que sepan como podemos cambiar ese porbelma con la informacion que les porporcionamos.</p>
+    <img src="file:///C:/Users/Biomedicos/Downloads/WhatsApp%20Image%202024-05-23%20at%2010.28.30%20AM.jpeg" alt="Imagen de Nosotros">
+  </div>
+
+<script>
+  function showContent(section) {
+    // Oculta todos los contenidos
+    var contents = document.getElementsByClassName("content");
+    for (var i = 0; i < contents.length; i++) {
+      contents[i].classList.remove("active");
+    }
+
+    // Muestra solo el contenido de la sección seleccionada
+    document.getElementById(section + "Content").classList.add("active");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diseño del sitio web</title>
+  <link rel="stylesheet" href="Diseño.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">DS</a>
+      </div>
+      <ul>
+        <li><a href="file:///C:/laura/Sitio%20Web/visitas%20cobach.html#">Inicio</a></li>
+        <li><a href="#" id="nosotros">Nosotros</a></li>
+        <li><a href="#" id="servicios">Servicios</a></li>
+        <li><a href="#" id="beneficios">Beneficios</a></li>
+        <li><a href="#" id="contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="img">
+    <img src="file:///C:/Users/Biomedicos/Downloads/Dise%C3%B1o%20sin%20t%C3%ADtulo.jpg" alt="UNIVERSIDAD AUTONOMA DE CHIAPAS">
+  </div>
+  <div class="center">
+    <div class="title">Basura en Desarrollo Sostenible</div>
+    <div class="sub_title">SIRB</div>
+    <div class="btns">
+      <button id="aprendeMas">Aprende más</button>
+      <button id="comentarios">Comentarios</button>
+    </div>
+  </div>
+
+  <script>
+    // Obtener referencia a los elementos de los botones
+    const nosotrosBtn = document.getElementById('nosotros');
+    const serviciosBtn = document.getElementById('servicios');
+    const beneficiosBtn = document.getElementById('beneficios');
+    const contactoBtn = document.getElementById('contacto');
+    const aprendeMasBtn = document.getElementById('aprendeMas');
+    const comentariosBtn = document.getElementById('comentarios');
+
+    // Agregar eventos de clic a los botones
+    nosotrosBtn.addEventListener('click', () => {
+      // Redirigir a la página de Nosotros
+      window.location.href = 'file:///C:/laura/Sitio%20Web/nosotos.html#'; // Reemplaza 'nosotos.html' con la ruta de tu página de Nosotros
+    });
+
+    serviciosBtn.addEventListener('click', () => {
+      // Redirigir a la página de Servicios
+      window.location.href = 'file:///C:/laura/Sitio%20Web/servicios.html#'; // Reemplaza 'servicios.html' con la ruta de tu página de Servicios
+    });
+
+    beneficiosBtn.addEventListener('click', () => {
+      // Redirigir a la página de Beneficios
+      window.location.href = 'file:///C:/laura/Sitio%20Web/beneficios.html'; // Reemplaza 'beneficios.html' con la ruta de tu página de Beneficios
+    });
+
+    contactoBtn.addEventListener('click', () => {
+      // Redirigir a la página de Contacto
+      window.location.href = 'file:///C:/laura/Sitio%20Web/contacto.html'; // Reemplaza 'contacto.html' con la ruta de tu página de Contacto
+    });
+
+    aprendeMasBtn.addEventListener('click', () => {
+      // Redirigir a la página de Aprende más
+      window.location.href = 'file:///C:/laura/Sitio%20Web/Aprende%20mas.html'; // Reemplaza 'Aprende%20mas.html' con la ruta de tu página de Aprende más
+    });
+
+    comentariosBtn.addEventListener('click', () => {
+      // Redirigir a la página de Comentarios
+      window.location.href = 'file:///C:/laura/Sitio%20Web/comentarios.html'; // Reemplaza 'comentarios.html' con la ruta de tu página de Comentarios
+    });
+  </script>
+</body>
+</html>

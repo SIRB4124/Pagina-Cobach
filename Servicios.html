@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basura de Desarrollo Sostenible - Servicios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+    }
+    nav ul li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #ddd;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .content {
+      margin-top: 20px;
+      display: none; /* oculta todos los contenidos por defecto */
+    }
+    .content.active {
+      display: block; /* muestra el contenido activo */
+    }
+    .content h2 {
+      color: #333;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Basura de Desarrollo Sostenible</h1>
+</header>
+
+<nav>
+  <ul>
+     <li><a href="file:///C:/laura/Sitio%20Web/visitas%20cobach.html#">Inicio</a></li>
+    <li><a href="file:///C:/laura/Sitio%20Web/nosotos.html#">Nosotros</a></li>
+    <li><a href="file:#">Servicios</a></li>
+    <li><a href="file:///C:/laura/Sitio%20Web/beneficios.html">Beneficios</a></li>
+    <li><a href="file:///C:/laura/Sitio%20Web/Aprende%20mas.html">Aprende más</a></li>
+    <li><a href="file:///C:/laura/Sitio%20Web/contacto.html">Contacto</a></li>
+        <li><a href="file:///C:/laura/Sitio%20Web/Aprende%20mas.html">Aprende más</a></li>
+    <li><a href="file:///C:/laura/Sitio%20Web/Comentarios.html">Comentarios</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="content" id="serviciosContent">
+    <h2>Servicios</h2>
+    <div class="service">
+      <img src="imagen_servicio_1.jpg" alt="Servicio 1">
+      <h3>Visitas a las instalaciones</h3>
+      <p>Nosotors vamos a las ionatalaciones de la escuelas y si el director nos da la autorisacion del acceso vamos a aun salon a dar a conocer nuestro tema de la basura y les brindamos informacion de como combatir la basura.</p>
+    </div>
+    <div class="service">
+      <img src="imagen_servicio_2.jpg" alt="Servicio 2">
+      <h3>Dinamicas</h3>
+      <p>Para que los alumnos no se aburrieran tanto hicimos alugnas dinamicas para ellos para que se dibiertan un poco y puedan divertise y tambien retro alomentacion para saber si en verdad estaban poniendo atencion.</p>
+    </div>
+    <div class="service">
+      <img src="imagen_servicio_3.jpg" alt="Servicio 3">
+      <h3>Premios</h3>
+      <p>Claro commo cada dinamica es obvio que dimos premios talvez no sean los grande premios pero grtacias a esos pequeños premios pudimos saber quienes si ponian atemcion y quienes noy su hubo gran vaiedad de premios que pudimos dar talvez no a todos pero si todos participaron.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showContent(section) {
+    // Oculta todos los contenidos
+    var contents = document.getElementsByClassName("content");
+    for (var i = 0; i < contents.length; i++) {
+      contents[i].classList.remove("active");
+    }
+
+    // Muestra solo el contenido de la sección seleccionada
+    document.getElementById(section + "Content").classList.add("active");
+  }
+</script>
+
+</body>
+</html>

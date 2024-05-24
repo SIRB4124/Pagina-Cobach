@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comentarios - Basura en Desarrollo Sostenible</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+    }
+    nav ul li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #ddd;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .content {
+      margin-top: 20px;
+    }
+    .content h2 {
+      color: #333;
+    }
+    .content p {
+      line-height: 1.6;
+    }
+    .comment-form {
+      margin-top: 20px;
+    }
+    .comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .comment-form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .comment-form button:hover {
+      background-color: #555;
+    }
+    .comments-section {
+      margin-top: 20px;
+    }
+    .comment {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Comentarios</h1>
+</header>
+
+<nav>
+<ul>
+            <li><a href="file:///C:/laura/Sitio%20Web/visitas%20cobach.html#">Inicio</a></li>
+            <li><a href="file:///C:/laura/Sitio%20Web/Indice.html">Introducción</a></li>
+            <li><a href="file:///C:/laura/Sitio%20Web/Planta.html">Planta</a></li>
+            <li><a href="file:///C:/laura/Sitio%20Web/VSTCB.html">Visitas del COBACH</a></li>
+            <li><a href="file:///C:/laura/Sitio%20Web/Agenda%202030.html">Agenda 2030</a></li>
+            <li><a href="file:///C:/laura/Sitio%20Web/Comentarios.html">Comentarios</a></li>
+        </ul>
+</nav>
+
+<div class="container">
+  <div class="content">
+    <h2>Deja tu comentario</h2>
+    <p>Nos encantaría conocer tu opinión sobre nuestro programa y cómo podemos mejorar. Deja tus comentarios a continuación.</p>
+    
+    <div class="comment-form">
+      <textarea id="commentText" placeholder="Escribe tu comentario aquí..."></textarea>
+      <button id="submitComment">Enviar</button>
+    </div>
+    
+    <div class="comments-section">
+      <h3>Comentarios recientes</h3>
+      <div id="commentsContainer">
+        <!-- Comentarios se agregarán aquí -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Función para obtener comentarios del almacenamiento local
+  function getComments() {
+    let comments = localStorage.getItem('comments');
+    return comments ? JSON.parse(comments) : [];
+  }
+
+  // Función para guardar comentarios en el almacenamiento local
+  function saveComment(comment) {
+    let comments = getComments();
+    comments.push(comment);
+    localStorage.setItem('comments', JSON.stringify(comments));
+  }
+
+  // Función para renderizar comentarios
+  function renderComments() {
+    const commentsContainer = document.getElementById('commentsContainer');
+    commentsContainer.innerHTML = '';
+    let comments = getComments();
+    comments.forEach(comment => {
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+      commentDiv.innerHTML = `<p><strong>${comment.user}:</strong> ${comment.text}</p>`;
+      commentsContainer.appendChild(commentDiv);
+    });
+  }
+
+  // Inicializar renderizado de comentarios
+  renderComments();
+
+  // Agregar evento al botón de enviar comentario
+  document.getElementById('submitComment').addEventListener('click', () => {
+    const commentText = document.getElementById('commentText').value;
+    if (commentText.trim()) {
+      saveComment({ user: 'Anónimo', text: commentText });
+      document.getElementById('commentText').value = '';
+      renderComments();
+    }
+  });
+</script>
+
+</body>
+</html>
